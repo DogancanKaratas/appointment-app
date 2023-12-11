@@ -27,7 +27,7 @@ const Home = () => {
       <AppointmentList
         appointments={appointments}
         handleDelete={handleDelete}
-        handleDubleClick={handleDoubleClick}
+        handleDoubleClick={handleDoubleClick}
         // setAppointments={setAppointments}
       />
     </main>
