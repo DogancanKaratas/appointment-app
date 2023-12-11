@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AddModal from "./AddModal";
 import { useState } from "react";
-const Doctors = ({handleAdd}) => {
+const Doctors = ({ handleAdd }) => {
   const [show, setShow] = useState(false);
   const [drName, setDrName] = useState("");
 
@@ -21,7 +21,7 @@ const Doctors = ({handleAdd}) => {
       </h3>
       <Row>
         {doctorData.map(({ id, img, dep, name }) => (
-          <Col xs={6} md={4} lg={3}  key={id}>
+          <Col xs={6} md={4} lg={3} key={id}>
             <img
               src={img}
               alt={name}
