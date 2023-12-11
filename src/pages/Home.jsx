@@ -14,15 +14,12 @@ const Home = () => {
     setAppointments(filteredList);
   };
 
-  const handleDubleClick = (id) => {
-    const newList = appointments.map((item) => {
-      if (item.id === id) {
-        return { ...item, consulted: !item.consulted };
-      }
-      return item;
-    });
-    setAppointments(newList);
-  }
+  const handleDoubleClick = (id) => {
+    const updatedList = appointments.map((item) =>
+      item.id === id ? { ...item, consulted: !item.consulted } : item
+    );
+    setAppointments(updatedList);
+  };
   return (
     <main className="text-center mt-2">
       <h1 className="display-5 text-danger">CLARUS HOSPITAL</h1>
@@ -30,7 +27,7 @@ const Home = () => {
       <AppointmentList
         appointments={appointments}
         handleDelete={handleDelete}
-        handleDubleClick={handleDubleClick}
+        handleDubleClick={handleDoubleClick}
         // setAppointments={setAppointments}
       />
     </main>

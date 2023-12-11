@@ -3,7 +3,7 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import { TiDelete } from "react-icons/ti";
 
-const AppointmentList = ({ appointments, handleDelete,handleDubleClick }) => {
+const AppointmentList = ({ appointments, handleDelete,handleDoubleClick }) => {
   return (
     <Container className="p-2">
       <h3 className="display-6 mb-2" style={{ color: "rgb(166, 18, 189)" }}>
@@ -18,7 +18,7 @@ const AppointmentList = ({ appointments, handleDelete,handleDubleClick }) => {
           key={id}
           className={consulted ? "appointments consulted" : "appointments"}
           role="button"
-          onDoubleClick={() => handleDubleClick(id)}
+          onDoubleClick={() => handleDoubleClick(id)}
         >
           <Row className="justify-content-between align-items-center">
             <Col md={6}>
